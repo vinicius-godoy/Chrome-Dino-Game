@@ -24,12 +24,25 @@ function detectarHit(){
 
     //Se o cactos e o dinossauro baterem ele reincia a posição do cacto e alerta sobre o fim do jogo
     if (cactusLeft < 40 && cactusLeft > 0 && dinoTop >= 95){
+        if(pontuacao > recorde){
+            recorde = pontuacao;
+            console.log("teste");
+        }
+        pontuacao = 0;
         cacto.classList.remove("cacto");
         alert("GAME OVER!");
         cacto.classList.add("cacto");
     }
 }
+function atualizarPontuacao(){
+    pontuacao += 1; // Aumenta a pontuação por um
+
+    // Atualiza os h1s de pontuação
+    document.getElementById("pontuacao").innerHTML = "Pontuação: " + pontuacao;
+    document.getElementById("recorde").innerHTML = "Seu Recorde: " + recorde;
+}
 
 // Execução do Jogo
 document.addEventListener("keydown", pressionar); // Escutar teclas pressionadas
-setInterval(detectarHit, 10); // Rodar a função de detecção de toque a cada 10 milisegundos
+setInterval(detectarHit, 10); // Rodar a função de detecção de toque a cada 10 milisegundoss
+setInterval(atualizarPontuacao, 100);
