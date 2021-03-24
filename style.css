@@ -47,23 +47,23 @@
 /* ANIMAÇÕES */
 @keyframes pular{
     0%{
-        top: 150px;
+        top: 139px;
     }
 
     25%{
-        top: 110px;
+        top: 100px;
     }
 
     50%{
-        top: 80px;
+        top: 70px;
     }
 
     75%{
-        top: 110px;
+        top: 100px;
     }
 
     100%{
-        top: 150px;
+        top: 139px;
     }
 }
 @keyframes cacto{
