@@ -3,7 +3,6 @@
     width: 600px;
     height: 200px;
     background-image: url(img/background.png);
-    background-size: 600px 200px;
     border: 1px solid black;
     margin: auto;
     overflow: hidden;
@@ -41,6 +40,9 @@
 .cacto{
     animation: cacto 1.5s infinite linear;
 }
+.fundo{
+    animation: fundo 1s infinite linear;
+}
 
 /* ANIMAÇÕES */
 @keyframes pular{
@@ -71,5 +73,13 @@
 
     100%{
         left: -25px;
+    }
+}
+@keyframes fundo{
+    from {
+        background-position: 700%;
+    }
+    to {
+        background-position: 0;
     }
 }
