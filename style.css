@@ -6,6 +6,7 @@
     background-size: 600px 200px;
     border: 1px solid black;
     margin: auto;
+    overflow: hidden;
 }
 #dino{
     width: 50px;
@@ -37,6 +38,9 @@
 .pulo{
     animation: pular 0.5s linear;
 }
+.cacto{
+    animation: cacto 1.5s infinite linear;
+}
 
 /* ANIMAÇÕES */
 @keyframes pular{
@@ -58,5 +62,14 @@
 
     100%{
         top: 150px;
+    }
+}
+@keyframes cacto{
+    0%{
+        left: 600px;
+    }
+
+    100%{
+        left: -25px;
     }
 }
